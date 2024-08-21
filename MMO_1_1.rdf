@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:bfo="http://purl.obolibrary.org/obo/bfo.owl#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:htp="http://purl.org/htp#">
+
+    <!-- The Meta Mesh Ontology (MMO) integrates diverse psychiatric knowledge bases into a cohesive framework, enhancing diagnostic precision and personalized treatment. -->
+    <!-- It unifies medical, psychological, and social data for a comprehensive understanding of mental health. -->
+    <owl:Ontology rdf:about="http://purl.org/htp">
+        <rdfs:label>Meta Mesh Ontology</rdfs:label>
+        <rdfs:comment>The Meta Mesh Ontology (MMO) is a unified framework designed to integrate diverse knowledge bases in psychiatry, facilitating more accurate and personalized diagnostic and treatment approaches.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://www.hitop-system.org/"/>
+        <owl:versionInfo>1.1</owl:versionInfo>
+        <dc:creator>Dr. Rogério Blitz</dc:creator>
+        <dc:date>2024-08-21</dc:date>
+        <dc:publisher>Dr. Rogério Blitz</dc:publisher>
+        <dc:contributor rdf:resource="mailto:rogerio.blitz@med.uni-jena.de"/>
+        <dcterms:issued>2024-08-21</dcterms:issued>
+        <dcterms:rightsHolder>Dr. Rogério Blitz</dcterms:rightsHolder>
+        <dcterms:rightsHolder>Universitätsklinikum Jena</dcterms:rightsHolder>
+        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-nc-nd/4.0/"/>
+        <dcterms:rights>This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License.</dcterms:rights>
+    </owl:Ontology>
+
+    <!-- Indicates potential future updates to the Meta Mesh Ontology, allowing the inclusion of new knowledge bases and components. -->
+    <!-- Highlights the ontology's flexibility to incorporate new elements and relationships as research evolves. -->
+    <owl:AnnotationProperty rdf:about="http://purl.org/htp#futureReleaseInfo">
+        <rdfs:label>Future Release Information</rdfs:label>
+        <rdfs:comment>
+            This ontology is designed with flexibility to incorporate new knowledge bases as research and scientific insights evolve. 
+            Future updates will facilitate the addition of new elements and relationships, ensuring continuous enhancement and refinement of the ontology.
+        </rdfs:comment>
+    </owl:AnnotationProperty>
+
+</rdf:RDF>
