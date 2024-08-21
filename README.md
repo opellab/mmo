@@ -59,3 +59,7 @@ The MMO provides a critical foundation for advancing psychiatric research and pr
 The MMO aims to continually evolve by incorporating new research findings and technological advancements, further bridging gaps between diverse knowledge systems and contributing to the advancement of personalized psychiatry.
 
 For further details and contributions, please visit our [https://opellab.github.io/mmo/](#).
+
+**License Information**
+
+The license terms for this ontology are included within the ontology itself. Please refer to the ontology file for detailed licensing information.
