@@ -7,7 +7,8 @@
     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:dcterms="http://purl.org/dc/terms/"
-    xmlns:htp="http://purl.org/htp#">
+    xmlns:htp="http://purl.org/htp#"
+    xmlns:metam="http://purl.org/metam#">
 
     <!-- The Meta Mesh Ontology (MMO) integrates diverse psychiatric knowledge bases into a cohesive framework, enhancing diagnostic precision and personalized treatment. -->
     <!-- It unifies medical, psychological, and social data for a comprehensive understanding of mental health. -->
