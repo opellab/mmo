@@ -60,6 +60,6 @@ The MMO aims to continually evolve by incorporating new research findings and te
 
 For further details and contributions, please visit our [https://opellab.github.io/mmo/](#).
 
-**License Information**
+## License Information
 
 The license terms for this ontology are included within the ontology itself. Please refer to the ontology file for detailed licensing information.
