@@ -7,6 +7,7 @@
     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:htp="http://purl.org/htp#"
     xmlns:metam="http://purl.org/metam#">
 
@@ -16,13 +17,18 @@
         <rdfs:label>Meta Mesh Ontology</rdfs:label>
         <rdfs:comment>The Meta Mesh Ontology (MMO) is a unified framework designed to integrate diverse knowledge bases in psychiatry, facilitating more accurate and personalized diagnostic and treatment approaches.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://www.hitop-system.org/"/>
-        <owl:versionInfo>1.1</owl:versionInfo>
-        <dc:creator>Dr. Rogério Blitz</dc:creator>
+        <owl:versionInfo>1.2</owl:versionInfo>
+        <dc:creator>
+            <foaf:Person>
+                <foaf:name>Dr. Rogério Blitz</foaf:name>
+                <foaf:mbox rdf:resource="mailto:rogerio.blitz@med.uni-jena.de"/>
+            </foaf:Person>
+        </dc:creator>
         <dc:date>2024-08-21</dc:date>
         <dc:publisher>Dr. Rogério Blitz, Prof. Dr. Nils Opel</dc:publisher>
-        <dc:contributor rdf:resource="mailto:rogerio.blitz@med.uni-jena.de"/>
+        <dc:contributor>Prof. Dr. Nils Opel</dc:contributor>
         <dcterms:issued>2024-08-21</dcterms:issued>
-        <dcterms:rightsHolder>Dr. Rogério Blitz</dcterms:rightsHolder>
+        <dcterms:rightsHolder>Dr. Rogério Blitz, Prof. Dr. Nils Opel</dcterms:rightsHolder>
         <dcterms:rightsHolder>Universitätsklinikum Jena</dcterms:rightsHolder>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-nc-nd/4.0/"/>
         <dcterms:rights>This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License.</dcterms:rights>
