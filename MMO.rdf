@@ -2,9 +2,10 @@
 <rdf:RDF
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:rdfa="http://www.w3.org/ns/rdfa#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:bfo="http://purl.obolibrary.org/obo/bfo.owl#"
-    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#" 
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:dcterms="http://purl.org/dc/terms/"
     xmlns:foaf="http://xmlns.com/foaf/0.1/"
@@ -43,5 +44,191 @@
             Future updates will facilitate the addition of new elements and relationships, ensuring continuous enhancement and refinement of the ontology.
         </rdfs:comment>
     </owl:AnnotationProperty>
+
+    <!-- Annotation for Thesauri, Taxonomies, and Classification Systems -->
+    <!-- This annotation describes the use of SKOS for structured knowledge organization -->
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#">
+        <rdfs:label>Thesauri, Taxonomies, and Classification Systems</rdfs:label>
+        <rdfs:comment>
+        SKOS (Simple Knowledge Organization System) is used for modeling thesauri, taxonomies, and classification systems. 
+        It allows the representation of concepts and their hierarchies.
+        </rdfs:comment>
+    </owl:AnnotationProperty>
+
+    <!-- Annotation for Ontologies -->
+    <!-- This annotation describes the use of OWL for defining and managing ontologies -->
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#">
+        <rdfs:label>Ontology</rdfs:label>
+        <rdfs:comment>
+            OWL (Web Ontology Language) concepts can also be represented in RDF. OWL uses RDF syntax to define ontologies, 
+            including classes, properties, and complex relationships. The OWL specification extends RDF and RDFS 
+            (RDF Schema), allowing you to use OWL elements such as rdf:Class, rdf:Property, rdfs:subClassOf, and OWL-specific constructs 
+            in an RDF file.
+        </rdfs:comment>
+    </owl:AnnotationProperty>
+
+    <!-- Annotation for Semantic Networks and Knowledge Graphs -->
+    <!-- This annotation describes the use of RDF for representing semantic networks and knowledge graphs -->
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+        <rdfs:label>Semantic Networks and Knowledge Graphs</rdfs:label>
+        <rdfs:comment>
+            RDF (Resource Description Framework) itself forms the basis for representing semantic networks and knowledge graphs, as it allows 
+            relationships between entities to be expressed in a triple format. RDF triples and the use of ontologies 
+            enable the modeling of complex knowledge structures.
+        </rdfs:comment>
+    </owl:AnnotationProperty>
+
+    <!-- Annotation for Rule Systems -->
+    <!-- This annotation describes the use of BFO for integrating and managing rule-based systems -->
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/bfo.owl#">
+        <rdfs:label>Rule Systems</rdfs:label>
+        <rdfs:comment>
+            The Basic Formal Ontology (BFO) is suitable for this use case as it provides a top-level ontology framework 
+            that can integrate different types of representations, including rule-based systems. BFO facilitates the 
+            structuring and categorization of entities and their relations at a very high level of abstraction, which 
+            is essential for formalizing rules and ensuring interoperability across various domains and data models. 
+            By using BFO, rule systems can be conceptualized within a unified framework that aligns with other knowledge 
+            representations, thereby supporting a more coherent and comprehensive approach to ontology-based reasoning 
+            and data integration.
+        </rdfs:comment>
+    </owl:AnnotationProperty>
+
+    <!-- Annotation for Model-Based Representations -->
+    <!-- This annotation describes the use of OWL for defining and managing model-based representations -->
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#">
+        <rdfs:label>Model-Based Representations</rdfs:label>
+        <rdfs:comment>
+            Model-based representations can be captured using OWL classes and properties within RDF. 
+            The structure and semantics of models can be expressed through RDF triples and OWL annotations.  
+            OWL (Web Ontology Language) is particularly suitable for this use case because it provides a formal semantics 
+            that enables precise modeling of complex knowledge structures. OWL extends RDF and RDFS (RDF Schema) with 
+            additional ontological constructs such as classes, properties, and restrictions, allowing for the creation 
+            of complex models with well-defined relationships and hierarchies. By using OWL, model-based representations 
+            can express not only structural, but also logical dependencies and constraints between entities, leading to 
+            a richer and more expressive representation. OWL also supports inference mechanisms that enable the generation 
+            of new knowledge from existing data, facilitating the analysis and management of complex models.
+        </rdfs:comment>
+    </owl:AnnotationProperty>
+
+    <!-- Annotation for Corpus-Based Representations -->
+    <!-- This annotation describes the use of Dublin Core Terms (dcterms) for metadata and annotations of corpora -->
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/">
+        <rdfs:label>Corpus-Based Representations</rdfs:label>
+        <rdfs:comment>
+            For corpus-based representations, RDF can be used to represent annotations and metadata for corpora. 
+            However, RDF does not provide specialized support for processing large text corpora; the corpus data itself 
+            would be managed outside the RDF data structure.       
+            Dublin Core Terms (dcterms) is particularly suitable for this use case because it provides a set of 
+            vocabulary terms that are widely used for describing a wide range of resources, including text corpora. 
+            dcterms enables the detailed description of metadata elements such as title, creator, subject, date, and 
+            format, which are essential for managing and organizing corpora. By using dcterms within RDF, it is possible 
+            to standardize the metadata associated with corpora, ensuring interoperability and facilitating data exchange 
+            across different systems. This standardization is crucial for enabling effective search, retrieval, and 
+            analysis of corpus data, especially when dealing with large and diverse text collections.
+        </rdfs:comment>
+    </owl:AnnotationProperty>
+
+    <owl:Class rdf:about="http://purl.org/metam#ClassificationConcept">
+        <rdfs:label>Classification Concept</rdfs:label>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/bfo.owl#gdc"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/metam#DescriptiveConcept">
+        <rdfs:label>Descriptive Concept</rdfs:label>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/bfo.owl#sdc"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/metam#PersistentConcept">
+        <rdfs:label>Persistent Concept</rdfs:label>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/bfo.owl#ic"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/metam#TemporalConcept">
+        <rdfs:label>Temporal Concept</rdfs:label>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/bfo.owl#occurrent"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/metam#Category">
+        <rdfs:label>Category</rdfs:label>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/metam#ClassificationConcept"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/metam#Class">
+        <rdfs:label>Class</rdfs:label>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/metam#ClassificationConcept"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/metam#Condition">
+        <rdfs:label>Condition</rdfs:label>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/metam#ClassificationConcept"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/metam#Trait">
+        <rdfs:label>Trait</rdfs:label>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/metam#DescriptiveConcept"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/metam#PsychopathologicalCategory">
+        <rdfs:label>Psychopathological Category</rdfs:label>
+        <rdfs:comment>A class representing broad groups of psychopathological features used for the classification and diagnosis of mental disorders. These categories can be subdivided into different levels (e.g., Superspectra, Spectra) to describe various dimensions and severities of mental disorders.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/metam#Category"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/metam#PsychopathologicalClass">
+        <rdfs:label>Psychopathological Class</rdfs:label>
+        <rdfs:comment>A fundamental class within a psychopathological category that represents specific features or dimensions of a mental disorder. Psychopathological Elements are the building blocks used for detailed description and analysis of subfactors and symptoms.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/metam#Class"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/metam#PathologicalCondition">
+        <rdfs:label>Pathological Condition</rdfs:label>
+        <rdfs:comment>A class of conditions representing physical or mental deviations from normal health. Pathological Conditions include both physical and mental disorders, characterized by specific symptoms and features.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/metam#Condition"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/metam#PsychologicalTrait">
+        <rdfs:label>Psychological Trait</rdfs:label>
+        <rdfs:comment>A class of qualities representing stable, enduring characteristics of an individual's psychological state. These qualities influence behavior, perception, and emotional experience and can appear as traits within psychopathological taxonomies.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/metam#Quality"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://purl.org/metam#PathologicalTrait">
+        <rdfs:label>Pathological Trait</rdfs:label>
+        <rdfs:comment>A class of qualities representing specific signs or symptoms of a Pathological Condition. These qualities manifest as observable or experienced deviations from normal function and serve as indicators of the presence of a disease or disorder.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/metam#Trait"/>
+    </owl:Class>
+
+    <!-- Define the Superspectra class as a subclass of PsychopathologicalCategory -->
+    <owl:Class rdf:about="http://purl.org/htp#Superspectra">
+        <rdfs:subClassOf rdf:resource="http://purl.org/metam#PsychopathologicalCategory"/>
+    </owl:Class>
+
+    <!-- Define the Component class as a subclass of PsychopathologicalClass -->
+    <owl:Class rdf:about="http://purl.org/htp#Component">
+        <rdfs:subClassOf rdf:resource="http://purl.org/metam#PsychopathologicalClass"/>
+    </owl:Class>
+
+    <!-- Define the Disorder class as a subclass of PathologicalCondition -->
+    <owl:Class rdf:about="http://purl.org/htp#Disorder">
+        <rdfs:subClassOf rdf:resource="http://purl.org/metam#PathologicalCondition"/>
+    </owl:Class>
+
+    <!-- Define the Trait class as a subclass of PsychologicalTrait -->
+    <owl:Class rdf:about="http://purl.org/htp#Trait">
+        <rdfs:subClassOf rdf:resource="http://purl.org/metam#PsychologicalTrait"/>
+    </owl:Class>
+
+    <!-- Define the Symptom class as a subclass of PathologicalTrait -->
+    <owl:Class rdf:about="http://purl.org/htp#Symptom">
+        <rdfs:subClassOf rdf:resource="http://purl.org/metam#PathologicalTrait"/>
+    </owl:Class>
 
 </rdf:RDF>
