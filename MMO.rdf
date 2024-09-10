@@ -4,12 +4,12 @@
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:rdfa="http://www.w3.org/ns/rdfa#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:bfo="http://purl.obolibrary.org/obo/bfo.owl#"
     xmlns:skos="http://www.w3.org/2004/02/skos/core#" 
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:dcterms="http://purl.org/dc/terms/"
     xmlns:foaf="http://xmlns.com/foaf/0.1/"
-    xmlns:htp="http://purl.org/htp#"
+    xmlns:voaf="http://purl.org/vocommons/voaf#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:metam="http://purl.org/metam#">
 
     <!-- The Meta Mesh Ontology (MMO) integrates diverse psychiatric knowledge bases into a cohesive framework, enhancing diagnostic precision and personalized treatment. -->
@@ -18,7 +18,7 @@
         <rdfs:label>Meta Mesh Ontology</rdfs:label>
         <rdfs:comment>The Meta Mesh Ontology (MMO) is a unified framework designed to integrate diverse knowledge bases in psychiatry, facilitating more accurate and personalized diagnostic and treatment approaches.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://www.hitop-system.org/"/>
-        <owl:versionInfo>1.2</owl:versionInfo>
+        <owl:versionInfo>1.3</owl:versionInfo>
         <dc:creator>
             <foaf:Person>
                 <foaf:name>Dr. Rogério Blitz</foaf:name>
@@ -230,5 +230,107 @@
     <owl:Class rdf:about="http://purl.org/htp#Symptom">
         <rdfs:subClassOf rdf:resource="http://purl.org/metam#PathologicalTrait"/>
     </owl:Class>
+
+    <!-- Importing BFO -->
+    <owl:imports rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+
+    <!-- Importing HiTOP -->
+    <owl:imports rdf:resource="http://purl.org/htp#"/>
+
+    <!-- Represents an ontology module within the meta-ontology framework. -->
+    <!-- Includes properties for versioning, licensing, and compliance with BFO. -->
+    <owl:Class rdf:about="metam:OntologyModule">
+        <rdfs:label>Ontology Module</rdfs:label>
+        <rdfs:comment>A modular part of an ontology to facilitate integration.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
+    <!-- A rule that defines how concepts from different ontologies are mapped to facilitate integration. -->
+    <!-- This class can be used to specify how elements from one ontology correspond to elements in another ontology. -->
+    <owl:Class rdf:about="meta:MappingRule">
+        <rdfs:label>Mapping Rule</rdfs:label>
+        <rdfs:comment>A rule that defines how concepts from different ontologies are mapped.</rdfs:comment>
+    </owl:Class>
+
+    <!-- Indicates that one concept is a temporal refinement or specialization of another concept. -->
+    <!-- This relationship pertains to time-bound events or processes. -->
+    <owl:ObjectProperty rdf:about="meta:isTemporalRefinementOf">
+        <rdfs:label>Temporal Refinement Of</rdfs:label>
+        <rdfs:comment>Indicates that one concept is a temporal refinement or specialization of another concept, where the refinement is related to time-bound events or processes.</rdfs:comment>
+        <rdfs:domain rdf:resource="bfo:Occurent"/>
+        <rdfs:range rdf:resource="bfo:Occurent"/>
+    </owl:ObjectProperty>
+
+    <!-- Indicates that one concept is a temporal generalization or broader category of another concept. -->
+    <!-- This relationship pertains to time-bound events or processes. -->
+    <owl:ObjectProperty rdf:about="meta:isTemporalGeneralizationOf">
+        <rdfs:label>Temporal Generalization Of</rdfs:label>
+        <rdfs:comment>Indicates that one concept is a temporal generalization or broader category of another concept, where the generalization is related to time-bound events or processes.</rdfs:comment>
+        <rdfs:domain rdf:resource="bfo:Occurent"/>
+        <rdfs:range rdf:resource="bfo:Occurent"/>
+    </owl:ObjectProperty>
+
+    <!-- Indicates that one concept is a constant refinement or specialization of another concept. -->
+    <!-- Both concepts are considered constant over time. -->
+    <owl:ObjectProperty rdf:about="meta:isConstantRefinementOf">
+        <rdfs:label>Constant Refinement Of</rdfs:label>
+        <rdfs:comment>Indicates that one concept is a constant refinement or specialization of another concept, where both concepts are considered constant over time.</rdfs:comment>
+        <rdfs:domain rdf:resource="bfo:Continuant"/>
+        <rdfs:range rdf:resource="bfo:Continuant"/>
+    </owl:ObjectProperty>
+
+    <!-- Indicates that one concept is a constant generalization or broader category of another concept. -->
+    <!-- Both concepts are considered constant over time. -->
+    <owl:ObjectProperty rdf:about="meta:isConstantGeneralizationOf">
+        <rdfs:label>Constant Generalization Of</rdfs:label>
+        <rdfs:comment>Indicates that one concept is a constant generalization or broader category of another concept, where both concepts are considered constant over time.</rdfs:comment>
+        <rdfs:domain rdf:resource="bfo:Continuant"/>
+        <rdfs:range rdf:resource="bfo:Continuant"/>
+    </owl:ObjectProperty>
+
+    <!-- The domain or field that the ontology module is relevant to (e.g., medicine, biology). -->
+    <!-- Specifies the primary area of application for the ontology module. -->
+    <owl:DatatypeProperty rdf:about="metam:hasDomain">
+        <rdfs:label>Domain</rdfs:label>
+        <rdfs:comment>The domain or field that the ontology module is relevant to (e.g., medicine, biology).</rdfs:comment>
+        <rdfs:domain rdf:resource="metam:OntologyModule"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </owl:DatatypeProperty>
+
+    <!-- Indicates whether the ontology module is compliant with the Basic Formal Ontology (BFO). -->
+    <!-- This helps in verifying if the module adheres to BFO standards for ontology integration. -->
+    <owl:DatatypeProperty rdf:about="metam:isBFOCompliant">
+        <rdfs:label>BFO Compliant</rdfs:label>
+        <rdfs:comment>This property indicates whether the ontology module is compliant with the Basic Formal Ontology (BFO).</rdfs:comment>
+        <rdfs:domain rdf:resource="metam:OntologyModule"/>
+        <rdfs:range rdf:resource="xsd:boolean"/>
+    </owl:DatatypeProperty>
+
+    <!-- The scope of the ontology module. -->
+    <!-- Indicates whether the coverage is broad or specific. -->
+    <owl:DatatypeProperty rdf:about="metam:scope">
+        <rdfs:label>Scope</rdfs:label>
+        <rdfs:comment>The scope of the ontology module (e.g., broad or specific coverage).</rdfs:comment>
+        <rdfs:domain rdf:resource="metam:OntologyModule"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </owl:DatatypeProperty>
+
+    <!-- Specifies potential use cases for the ontology module. -->
+    <!-- Describes the practical applications or scenarios where the ontology can be utilized. -->
+    <owl:DatatypeProperty rdf:about="metam:useCase">
+        <rdfs:label>Use Case</rdfs:label>
+        <rdfs:comment>Specifies potential use cases for the ontology module.</rdfs:comment>
+        <rdfs:domain rdf:resource="metam:OntologyModule"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </owl:DatatypeProperty>
+
+    <!-- Indicates which systems or ontologies use this module. -->
+    <!-- Specifies the relationships between the ontology module and other modules or systems that rely on it. -->
+    <owl:ObjectProperty rdf:about="metam:isUsedBy">
+        <rdfs:label>Is Used By</rdfs:label>
+        <rdfs:comment>Indicates which systems or ontologies use this module.</rdfs:comment>
+        <rdfs:domain rdf:resource="metam:OntologyModule"/>
+        <rdfs:range rdf:resource="metam:OntologyModule"/>
+    </owl:ObjectProperty>
 
 </rdf:RDF>
