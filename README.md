@@ -32,11 +32,6 @@ The Meta Mesh Ontology (MMO) represents a groundbreaking effort to enhance perso
 - **Approach**: Focuses on biological and psychological constructs to analyze underlying mechanisms.
 - **Goal**: Provides a deeper understanding of mental disorders beyond symptomatic criteria.
 
-### Transdiagnostic Approach to Psychiatric Classification System (TADS)
-
-- **Perspective**: Captures similarities and differences between various disorders.
-- **Outcome**: Promotes a holistic view of mental health, overcoming rigid categorical models.
-
 ### Social-Ecological Systems and Socioeconomic Ontologies
 
 - **Integration**: Incorporates sociodemographic and ecological factors into psychiatric diagnostics.
