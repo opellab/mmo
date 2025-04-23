@@ -27,7 +27,7 @@
         </dc:creator>
         <dc:date>2024-08-21</dc:date>
         <dc:publisher>Dr. Rogério Blitz, Prof. Dr. Nils Opel</dc:publisher>
-        <dc:contributor>Prof. Dr. Nils Opel</dc:contributor>
+        <dc:contributor>Dr. Rogério Blitz,, Prof. Dr. Nils Opel</dc:contributor>
         <dcterms:issued>2024-08-21</dcterms:issued>
         <dcterms:rightsHolder>Dr. Rogério Blitz, Prof. Dr. Nils Opel</dcterms:rightsHolder>
         <dcterms:rightsHolder>Universitätsklinikum Jena</dcterms:rightsHolder>
@@ -204,31 +204,6 @@
         <rdfs:label>Pathological Trait</rdfs:label>
         <rdfs:comment>A class of qualities representing specific signs or symptoms of a Pathological Condition. These qualities manifest as observable or experienced deviations from normal function and serve as indicators of the presence of a disease or disorder.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.org/metam#Trait"/>
-    </owl:Class>
-
-    <!-- Define the Superspectra class as a subclass of PsychopathologicalCategory -->
-    <owl:Class rdf:about="http://purl.org/htp#Superspectra">
-        <rdfs:subClassOf rdf:resource="http://purl.org/metam#PsychopathologicalCategory"/>
-    </owl:Class>
-
-    <!-- Define the Component class as a subclass of PsychopathologicalClass -->
-    <owl:Class rdf:about="http://purl.org/htp#Component">
-        <rdfs:subClassOf rdf:resource="http://purl.org/metam#PsychopathologicalClass"/>
-    </owl:Class>
-
-    <!-- Define the Disorder class as a subclass of PathologicalCondition -->
-    <owl:Class rdf:about="http://purl.org/htp#Disorder">
-        <rdfs:subClassOf rdf:resource="http://purl.org/metam#PathologicalCondition"/>
-    </owl:Class>
-
-    <!-- Define the Trait class as a subclass of PsychologicalTrait -->
-    <owl:Class rdf:about="http://purl.org/htp#Trait">
-        <rdfs:subClassOf rdf:resource="http://purl.org/metam#PsychologicalTrait"/>
-    </owl:Class>
-
-    <!-- Define the Symptom class as a subclass of PathologicalTrait -->
-    <owl:Class rdf:about="http://purl.org/htp#Symptom">
-        <rdfs:subClassOf rdf:resource="http://purl.org/metam#PathologicalTrait"/>
     </owl:Class>
 
     <!-- Importing BFO -->
