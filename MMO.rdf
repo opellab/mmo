@@ -19,7 +19,6 @@
     <owl:Ontology rdf:about="http://purl.org/htp">
         <rdfs:label>Meta Mesh Ontology</rdfs:label>
         <rdfs:comment>The Meta Mesh Ontology (MMO) is a unified framework designed to integrate diverse knowledge bases in psychiatry, facilitating more accurate and personalized diagnostic and treatment approaches.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="https://www.hitop-system.org/"/>
         <owl:versionInfo>1.4</owl:versionInfo>
         <dc:creator>
             <foaf:Person>
@@ -27,7 +26,7 @@
                 <foaf:mbox rdf:resource="mailto:rogerio.blitz@med.uni-jena.de"/>
             </foaf:Person>
         </dc:creator>
-        <dc:date>2024-08-21</dc:date>
+        <dc:date>2025-04-25</dc:date>
         <dc:publisher>Dr. Rogério Blitz, Prof. Dr. Nils Opel</dc:publisher>
         <dc:contributor>Dr. Rogério Blitz,, Prof. Dr. Nils Opel</dc:contributor>
         <dcterms:issued>2024-08-21</dcterms:issued>
@@ -38,7 +37,7 @@
 
     <!-- The most general category for all entities in the ontology. -->
     <!-- Serves as the top-level integration point aligning with BFO's root class. -->
-    <Class rdf:about="http://example.org/metam#Entity">
+    <Class rdf:about="http://purl.org/metam#Entity">
         <rdfs:label>Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000001</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
@@ -46,7 +45,7 @@
 
     <!-- Represents entities that persist through time while maintaining identity. -->
     <!-- Provides a base for all enduring concepts used in knowledge integration. -->
-    <Class rdf:about="http://example.org/metam#ContinuantEntity">
+    <Class rdf:about="http://purl.org/metam#ContinuantEntity">
         <rdfs:label>Continuant Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000002</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
@@ -54,7 +53,7 @@
 
     <!-- Requires a bearer but is not tied to a specific individual. -->
     <!-- Useful for modeling symbolic, digital, or descriptive content. -->
-    <Class rdf:about="http://example.org/metam#GenericallyDependentEntity">
+    <Class rdf:about="http://purl.org/metam#GenericallyDependentEntity">
         <rdfs:label>GenericallyDependent Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000031</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
@@ -62,7 +61,7 @@
 
     <!-- Captures entities that exist independently of others. -->
     <!-- Useful for modeling physical or spatially self-sufficient units. -->
-    <Class rdf:about="http://example.org/metam#IndependentEntity">
+    <Class rdf:about="http://purl.org/metam#IndependentEntity">
         <rdfs:label>Independent Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000004</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
@@ -70,7 +69,7 @@
 
     <!-- Captures space-like or non-material structures. -->
     <!-- Essential for spatial modeling, especially in anatomical domains. -->
-    <Class rdf:about="http://example.org/metam#ImmaterialEntity">
+    <Class rdf:about="http://purl.org/metam#ImmaterialEntity">
         <rdfs:label>Immaterial Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000141</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
@@ -78,7 +77,7 @@
 
     <!-- Represents non-material boundaries defined by convention, not structure. -->
     <!-- Useful for modeling conceptual partitions of continuant entities. -->
-    <Class rdf:about="http://example.org/metam#ContinuantFiatBoundaryEntity">
+    <Class rdf:about="http://purl.org/metam#ContinuantFiatBoundaryEntity">
         <rdfs:label>ContinuantFiatBoundary Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000140</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000140"/>
@@ -86,7 +85,7 @@
 
     <!-- A linear conceptual boundary without surface or volume. -->
     <!-- Enables modeling of anatomical or technical axes and dividers. -->
-    <Class rdf:about="http://example.org/metam#OneDContinuantFiatBoundary">
+    <Class rdf:about="http://purl.org/metam#OneDContinuantFiatBoundary">
         <rdfs:label>OneDContinuantFiatBoundary Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000142</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000142"/>
@@ -94,7 +93,7 @@
 
     <!-- A surface-like fiat boundary spanning two dimensions. -->
     <!-- Commonly used for modeling sectional planes or walls. -->
-    <Class rdf:about="http://example.org/metam#TwoDContinuantFiatBoundary">
+    <Class rdf:about="http://purl.org/metam#TwoDContinuantFiatBoundary">
         <rdfs:label>TwoDContinuantFiatBoundary Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000146</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000146"/>
@@ -102,7 +101,7 @@
 
     <!-- A point-like fiat boundary with no dimensional extension. -->
     <!-- Ideal for abstract markers or reference points within structures. -->
-    <Class rdf:about="http://example.org/metam#ZeroDContinuantFiatBoundary">
+    <Class rdf:about="http://purl.org/metam#ZeroDContinuantFiatBoundary">
         <rdfs:label>ZeroDContinuantFiatBoundary Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000147</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000147"/>
@@ -110,7 +109,7 @@
 
     <!-- A location or environment relative to material entities. -->
     <!-- Frequently used to integrate surgical or treatment locations. -->
-    <Class rdf:about="http://example.org/metam#SiteEntity">
+    <Class rdf:about="http://purl.org/metam#SiteEntity">
         <rdfs:label>Site Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_000029</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000029"/>
@@ -118,7 +117,7 @@
 
     <!-- A defined spatial extent in which entities can be located. -->
     <!-- Supports geospatial, anatomical, and modeling-related constructs. -->
-    <Class rdf:about="http://example.org/metam#SpatialRegionEntity">
+    <Class rdf:about="http://purl.org/metam#SpatialRegionEntity">
         <rdfs:label>SpatialRegion Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000006</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
@@ -126,7 +125,7 @@
 
     <!-- Represents linear spatial extents, such as paths or edges. -->
     <!-- Useful for modeling trajectories, anatomical tracts, or connections. -->   
-    <Class rdf:about="http://example.org/metam#OneDSpatialRegion">
+    <Class rdf:about="http://purl.org/metam#OneDSpatialRegion">
         <rdfs:label>OneDSpatialRegion Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000026</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000026"/>
@@ -134,7 +133,7 @@
 
     <!-- Captures volumetric spatial extents with depth, width, and height. -->
     <!-- Ideal for representing enclosed spaces like organs, rooms, or containers. -->
-    <Class rdf:about="http://example.org/metam#ThreeDSpatialRegion">
+    <Class rdf:about="http://purl.org/metam#ThreeDSpatialRegion">
         <rdfs:label>ThreeDSpatialRegion Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000028</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000028"/>
@@ -142,7 +141,7 @@
 
     <!-- Refers to flat spatial areas with measurable surface properties. -->
     <!-- Enables modeling of planes, membranes, or schematic representations. -->
-    <Class rdf:about="http://example.org/metam#TwoDSpatialRegion">
+    <Class rdf:about="http://purl.org/metam#TwoDSpatialRegion">
         <rdfs:label>TwoDSpatialRegion Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000009</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000009"/>
@@ -150,7 +149,7 @@
 
     <!-- Denotes point-like spatial entities without extension. -->
     <!-- Suitable for modeling coordinates, intersections, or reference markers. -->
-    <Class rdf:about="http://example.org/metam#ZeroDSpatialRegion">
+    <Class rdf:about="http://purl.org/metam#ZeroDSpatialRegion">
         <rdfs:label>ZeroDSpatialRegion Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000018</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000018"/>
@@ -158,7 +157,7 @@
 
     <!-- Represents physical, tangible entities with mass. -->
     <!-- Forms the foundation for concrete biomedical and technical concepts. -->
-    <Class rdf:about="http://example.org/metam#MaterialEntity">
+    <Class rdf:about="http://purl.org/metam#MaterialEntity">
         <rdfs:label>Material Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000040</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
@@ -166,7 +165,7 @@
 
     <!-- Non-physical part of a material entity, defined by convention. -->
     <!-- Supports partonomic integration of conceptual subdivisions. -->
-    <Class rdf:about="http://example.org/metam#FiatObjectPartEntity">
+    <Class rdf:about="http://purl.org/metam#FiatObjectPartEntity">
         <rdfs:label>FiatObjectPart Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000024</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000024"/>
@@ -174,7 +173,7 @@
 
     <!-- A bounded material entity with clear identity and unity. -->
     <!-- Commonly used for integrating anatomical or device-related terms. -->
-    <Class rdf:about="http://example.org/metam#ObjectEntity">
+    <Class rdf:about="http://purl.org/metam#ObjectEntity">
         <rdfs:label>Object Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000030</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
@@ -182,7 +181,7 @@
 
     <!-- An aggregate composed of multiple discrete material objects. -->
     <!-- Useful for representing systems, collections, or compound structures. -->
-    <Class rdf:about="http://example.org/metam#ObjectAggregateEntity">
+    <Class rdf:about="http://purl.org/metam#ObjectAggregateEntity">
         <rdfs:label>ObjectAggregate Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000027</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
@@ -190,7 +189,7 @@
 
     <!-- Depends on and inheres in another individual entity. -->
     <!-- Central for modeling roles, attributes, or conditions in context. -->
-    <Class rdf:about="http://example.org/metam#SpecificallyDependentEntity">
+    <Class rdf:about="http://purl.org/metam#SpecificallyDependentEntity">
         <rdfs:label>SpecificallyDependent Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000020</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
@@ -198,7 +197,7 @@
 
     <!-- An inbuilt property like color, mass, or shape. -->
     <!-- Used to align observable characteristics across ontologies. -->
-    <Class rdf:about="http://example.org/metam#QualityEntity">
+    <Class rdf:about="http://purl.org/metam#QualityEntity">
         <rdfs:label>Quality Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000019</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
@@ -206,7 +205,7 @@
 
     <!-- Qualities involving relations between multiple entities. -->
     <!-- Captures dependencies like distance, connectivity, or similarity. -->
-    <Class rdf:about="http://example.org/metam#RelationalQualityEntity">
+    <Class rdf:about="http://purl.org/metam#RelationalQualityEntity">
         <rdfs:label>RelationalQuality Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000145</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000145"/>
@@ -214,7 +213,7 @@
 
     <!-- Entities that exist as potentials or capabilities. -->
     <!-- Includes roles, dispositions, and functions that may be realized. -->
-    <Class rdf:about="http://example.org/metam#RealizableEntity">
+    <Class rdf:about="http://purl.org/metam#RealizableEntity">
         <rdfs:label>Realizable Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000017</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
@@ -222,7 +221,7 @@
 
     <!-- A tendency or potential behavior of an entity. -->
     <!-- Used for modeling clinical risk, fragility, or reactivity. -->
-    <Class rdf:about="http://example.org/metam#DispositionEntity">
+    <Class rdf:about="http://purl.org/metam#DispositionEntity">
         <rdfs:label>Disposition Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000016</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
@@ -230,7 +229,7 @@
 
     <!-- An intended capability or action potential of an entity. -->
     <!-- Often associated with biological or designed purposes. -->
-    <Class rdf:about="http://example.org/metam#FunctionEntity">
+    <Class rdf:about="http://purl.org/metam#FunctionEntity">
         <rdfs:label>Function Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000034</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
@@ -238,7 +237,7 @@
 
     <!-- A contextual, non-essential aspect an entity can assume. -->
     <!-- Enables the modeling of temporary or situational states. -->
-    <Class rdf:about="http://example.org/metam#RoleEntity">
+    <Class rdf:about="http://purl.org/metam#RoleEntity">
         <rdfs:label>Role Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000023</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
@@ -246,7 +245,7 @@
 
     <!-- An entity that unfolds through time, like events or processes. -->
     <!-- Base for dynamic phenomena relevant in clinical and temporal modeling. -->
-    <Class rdf:about="http://example.org/metam#OccurrentEntity">
+    <Class rdf:about="http://purl.org/metam#OccurrentEntity">
         <rdfs:label>Occurrent Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000003</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
@@ -254,7 +253,7 @@
 
     <!-- A temporal unfolding or change involving participants. -->
     <!-- Used for modeling diagnoses, treatments, and physiological activities. -->
-    <Class rdf:about="http://example.org/metam#ProcessEntity">
+    <Class rdf:about="http://purl.org/metam#ProcessEntity">
         <rdfs:label>Process Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000015</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
@@ -262,7 +261,7 @@
 
     <!-- A connected sequence of past events or processes. -->
     <!-- Enables timeline-based structuring of patient or system evolution. -->
-    <Class rdf:about="http://example.org/metam#HistoryEntity">
+    <Class rdf:about="http://purl.org/metam#HistoryEntity">
         <rdfs:label>History Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000182</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000182"/>
@@ -270,7 +269,7 @@
 
     <!-- A generalized view over types or patterns of processes. -->
     <!-- Supports abstraction and comparison of dynamic behaviors. -->
-    <Class rdf:about="http://example.org/metam#ProcessProfileEntity">
+    <Class rdf:about="http://purl.org/metam#ProcessProfileEntity">
         <rdfs:label>ProcessProfile Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000144</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000144"/>
@@ -278,7 +277,7 @@
 
     <!-- Represents a temporal limit or endpoint of a process. -->
     <!-- Useful for modeling events with precise beginnings or endings in time. -->
-    <Class rdf:about="http://example.org/metam#ProcessBoundary">
+    <Class rdf:about="http://purl.org/metam#ProcessBoundary">
         <rdfs:label>ProcessBoundary Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000035</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000035"/>
@@ -286,7 +285,7 @@
 
     <!-- A region defined in both space and time dimensions. -->
     <!-- Integrates temporal and spatial context of entities or actions. -->
-    <Class rdf:about="http://example.org/metam#SpatiotemporalRegionEntity">
+    <Class rdf:about="http://purl.org/metam#SpatiotemporalRegionEntity">
         <rdfs:label>SpatiotemporalRegion Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000011</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000011"/>
@@ -294,7 +293,7 @@
 
     <!-- A bounded interval or point in time. -->
     <!-- Provides anchors for modeling temporally dependent knowledge. -->
-    <Class rdf:about="http://example.org/metam#TemporalRegionEntity">
+    <Class rdf:about="http://purl.org/metam#TemporalRegionEntity">
         <rdfs:label>TemporalRegion Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000008</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
@@ -302,7 +301,7 @@
 
     <!-- A linear span of time with duration. -->
     <!-- Captures periods like treatments, disease progression or studies. -->
-    <Class rdf:about="http://example.org/metam#OneDTemporalRegionEntity">
+    <Class rdf:about="http://purl.org/metam#OneDTemporalRegionEntity">
         <rdfs:label>OneDTemporalRegion Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000038</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
@@ -310,7 +309,7 @@
 
     <!-- A point-like moment in time with no duration. -->
     <!-- Useful for events like diagnoses, time stamps, or measurements. -->
-    <Class rdf:about="http://example.org/metam#ZeroDTemporalRegionEntity">
+    <Class rdf:about="http://purl.org/metam#ZeroDTemporalRegionEntity">
         <rdfs:label>ZeroDTemporalRegion Entity</rdfs:label>
         <rdfs:comment>MMO-level class mapped to BFO:BFO_0000148</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000148"/>
@@ -326,7 +325,7 @@
 
     <!-- A rule that defines how concepts from different ontologies are mapped to facilitate integration. -->
     <!-- This class can be used to specify how elements from one ontology correspond to elements in another ontology. -->
-    <owl:ObjectProperty rdf:about="meta:isMappedTo">
+    <owl:ObjectProperty rdf:about="metam:isMappedTo">
         <rdfs:label>Mapping Rule</rdfs:label>
         <rdfs:comment>Mapping from a concept in one ontology to a corresponding concept in another ontology.</rdfs:comment>
         <rdfs:domain rdf:resource="owl:Class"/>
@@ -335,7 +334,7 @@
 
     <!-- Indicates that one concept is a temporal refinement or specialization of another concept. -->
     <!-- This relationship pertains to time-bound events or processes. -->
-    <owl:ObjectProperty rdf:about="meta:isTemporalRefinementOf">
+    <owl:ObjectProperty rdf:about="metam:isTemporalRefinementOf">
         <rdfs:label>Temporal Refinement Of</rdfs:label>
         <rdfs:comment>Indicates that one concept is a temporal refinement or specialization of another concept, where the refinement is related to time-bound events or processes.</rdfs:comment>
         <rdfs:domain rdf:resource="bfo:Occurent"/>
@@ -344,7 +343,7 @@
 
     <!-- Indicates that one concept is a temporal generalization or broader category of another concept. -->
     <!-- This relationship pertains to time-bound events or processes. -->
-    <owl:ObjectProperty rdf:about="meta:isTemporalGeneralizationOf">
+    <owl:ObjectProperty rdf:about="metam:isTemporalGeneralizationOf">
         <rdfs:label>Temporal Generalization Of</rdfs:label>
         <rdfs:comment>Indicates that one concept is a temporal generalization or broader category of another concept, where the generalization is related to time-bound events or processes.</rdfs:comment>
         <rdfs:domain rdf:resource="bfo:Occurent"/>
@@ -353,7 +352,7 @@
 
     <!-- Indicates that one concept is a constant refinement or specialization of another concept. -->
     <!-- Both concepts are considered constant over time. -->
-    <owl:ObjectProperty rdf:about="meta:isConstantRefinementOf">
+    <owl:ObjectProperty rdf:about="metam:isConstantRefinementOf">
         <rdfs:label>Constant Refinement Of</rdfs:label>
         <rdfs:comment>Indicates that one concept is a constant refinement or specialization of another concept, where both concepts are considered constant over time.</rdfs:comment>
         <rdfs:domain rdf:resource="bfo:Continuant"/>
@@ -362,7 +361,7 @@
 
     <!-- Indicates that one concept is a constant generalization or broader category of another concept. -->
     <!-- Both concepts are considered constant over time. -->
-    <owl:ObjectProperty rdf:about="meta:isConstantGeneralizationOf">
+    <owl:ObjectProperty rdf:about="metam:isConstantGeneralizationOf">
         <rdfs:label>Constant Generalization Of</rdfs:label>
         <rdfs:comment>Indicates that one concept is a constant generalization or broader category of another concept, where both concepts are considered constant over time.</rdfs:comment>
         <rdfs:domain rdf:resource="bfo:Continuant"/>
@@ -389,7 +388,7 @@
 
     <!-- The scope of the ontology module. -->
     <!-- Indicates whether the coverage is broad or specific. -->
-    <owl:DatatypeProperty rdf:about="metam:scope">
+    <owl:DatatypeProperty rdf:about="metam:hasScope">
         <rdfs:label>Scope</rdfs:label>
         <rdfs:comment>The scope of the ontology module (e.g., broad or specific coverage).</rdfs:comment>
         <rdfs:domain rdf:resource="metam:OntologyModule"/>
@@ -429,7 +428,7 @@
 
     <!-- Declares the original source from which a class or concept was derived. -->
     <!-- Enables provenance tracking across integrated ontologies and external knowledge systems. -->
-    <owl:AnnotationProperty rdf:about="meta:hasSource">
+    <owl:AnnotationProperty rdf:about="metam:hasSource">
         <rdfs:label>Source</rdfs:label>
         <rdfs:comment>
             Indicates the original source or provenance of a mapped concept, such as the originating ontology, thesaurus, or controlled vocabulary.
