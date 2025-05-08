@@ -1,3 +1,6 @@
 /docs
 /versions
-/modules
+/modules/tpl
+/modules/snomed
+/modules/loinc
+/modules/soho

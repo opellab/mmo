@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:aceso="http://www.semanticweb.org/cbmi/ontologies/2018/10/aceso"
+    xmlns:metam="http://purl.org/metam#">
+
+    <!-- Metadata block describing the ACESO ontology module and its publication details. -->    
+    <!-- Contains versioning, licensing, authorship and rights declarations. -->
+    <owl:Ontology rdf:about="http://purl.org/metam/modules/aceso">
+        <rdfs:label>ACESO Ontology Module</rdfs:label>
+        <rdfs:comment>
+            This module integrates selected concepts from the ACESO ontology into the Meta Mesh Ontology.
+            It supports reasoning-compatible classification while preserving original semantic context.
+        </rdfs:comment>
+        <owl:versionInfo>1.0</owl:versionInfo>
+        <dc:creator>
+            <foaf:Person>
+                <foaf:name>Dr. Rogério Blitz</foaf:name>
+                <foaf:mbox rdf:resource="mailto:rogerio.blitz@med.uni-jena.de"/>
+            </foaf:Person>
+        </dc:creator>
+        <dc:date rdf:datatype="xsd:date">2025-05-07</dc:date>
+        <dc:publisher>Dr. Rogério Blitz</dc:publisher>
+        <dc:contributor>Dr. Rogério Blitz</dc:contributor>
+        <dcterms:issued rdf:datatype="xsd:date">2025-05-07</dcterms:issued>
+        <dcterms:rightsHolder>Dr. Rogério Blitz</dcterms:rightsHolder>
+        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-nc-nd/4.0/"/>
+        <dcterms:rights>This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License.</dcterms:rights>
+    </owl:Ontology>
+
+    <!-- Declares the ACESO integration as a formal MMO ontology module. -->
+    <!-- Enables modular reuse and refinement of ToDo concepts. -->
+    <metam:OntologyModule rdf:about="http://purl.org/metam/modules/aceso">
+        <rdfs:label>Adverse Childhood Experiences Ontology (ACESO) Integration Module</rdfs:label>
+        <metam:hasDomain>adverse childhood experiences</metam:hasDomain>
+        <metam:isBFOCompliant xsd:datatype="xsd:boolean">true</metam:isBFOCompliant>
+        <metam:scope>specific</metam:scope>
+        <metam:useCase>Integration of ACESO concepts into the MMO</metam:useCase>
+    </metam:OntologyModule>
+
+    <!-- Represents socially rooted experiences affecting child development and health. -->
+<!-- Serves as an abstract grouping for ACESO concepts distinct from structural determinants. -->
+    <owl:Class rdf:about="http://purl.org/metam/modules/aceso#SocialFactorEntity">
+        <rdfs:label>Social Factor Entity</rdfs:label>
+        <rdfs:comment>
+            Abstract grouping class for childhood experiences with social origins that influence health, 
+            distinct from broader structural determinants.
+        </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="metam:SpecificallyDependentEntity"/>
+        <metam:isPartOfModule rdf:resource="http://purl.org/metam/modules/aceso"/>
+    </owl:Class>
+
+    <!-- Describes the lack of emotional support or affirmation during childhood. -->
+    <!-- Considered a form of neglect with lasting psychological effects. -->
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/LNC/LP231633-1">
+        <rdfs:label>Emotional Neglect</rdfs:label>
+        <rdfs:comment>Lack of emotional care or validation experienced during childhood.</rdfs:comment>
+        <metam:hasExternalParent rdf:resource="http://www.semanticweb.org/cbmi/ontologies/2018/10/aceso#Neglect"/>
+        <metam:isConstantRefinementOf rdf:resource="http://purl.org/metam/modules/aceso#SocialFactorEntity"/>
+        <metam:isPartOfModule rdf:resource="http://purl.org/metam/modules/aceso"/>
+        <metam:hasSource>ACESO</metam:hasSource>
+        <dcterms:source>ACESO Concept LP231633-1</dcterms:source>
+        <owl:equivalentClass rdf:resource="aceso:LP231633-1"/>
+    </owl:Class>
+
+    <!-- Captures discriminatory childhood experiences based on identity attributes. -->
+    <!-- Relevant for understanding long-term psychosocial trauma. -->
+    <owl:Class rdf:about="http://www.semanticweb.org/cbmi/ontologies/2018/10/aceso#Suffered_From_Discrimination_Because_of_Race_Sexual_Orientation_Place_of_Birth_Disability_or_Religion">
+        <rdfs:label>Suffered_From_Discrimination_Because_of_Race_Sexual_Orientation_Place_of_Birth_Disability_or_Religion</rdfs:label>
+        <rdfs:comment>Childhood experience of exclusion or harm based on identity-related attributes.</rdfs:comment>
+        <metam:hasExternalParent rdf:resource="http://www.semanticweb.org/cbmi/ontologies/2018/10/aceso#Adverse_Childhood_Experiences"/>
+        <metam:isConstantRefinementOf rdf:resource="http://purl.org/metam/modules/aceso#SocialFactorEntity"/>
+        <metam:isPartOfModule rdf:resource="http://purl.org/metam/modules/aceso"/>
+        <metam:hasSource>ACESO</metam:hasSource>
+        <dcterms:source>ACESO Concept Suffered_From_Discrimination_Because_of_Race_Sexual_Orientation_Place_of_Birth_Disability_or_Religion</dcterms:source>
+        <owl:equivalentClass rdf:resource="aceso:Suffered_From_Discrimination_Because_of_Race_Sexual_Orientation_Place_of_Birth_Disability_or_Religion"/>
+    </owl:Class>
+
+    <!-- Records the death of a parent or guardian during a child's upbringing. -->
+    <!-- Often associated with grief, instability, and increased vulnerability. -->
+    <owl:Class rdf:about="http://www.semanticweb.org/cbmi/ontologies/2018/10/aceso#Lived_with_Parent_or_Guardian_who_Died">
+        <rdfs:label>Lived_with_Parent_or_Guardian_who_Died</rdfs:label>
+        <rdfs:comment>Childhood experience involving the death of a primary caregiver.</rdfs:comment>
+        <metam:hasExternalParent rdf:resource="http://www.semanticweb.org/cbmi/ontologies/2018/10/aceso#Adverse_Childhood_Experiences"/>
+        <metam:isConstantRefinementOf rdf:resource="http://purl.org/metam/modules/aceso#SocialFactorEntity"/>
+        <metam:isPartOfModule rdf:resource="http://purl.org/metam/modules/aceso"/>
+        <metam:hasSource>ACESO</metam:hasSource>
+        <dcterms:source>ACESO Concept Lived_with_Parent_or_Guardian_who_Died</dcterms:source>
+        <owl:equivalentClass rdf:resource="aceso:Lived_with_Parent_or_Guardian_who_Died"/>
+    </owl:Class>
+
+    <!-- Describes living with a caregiver affected by mental illness. -->
+    <!-- A known factor influencing emotional and behavioral development. -->
+    <owl:Class rdf:about="http://www.semanticweb.org/cbmi/ontologies/2018/10/aceso#Mental_Illness_In_Household">
+        <rdfs:label>Mental_Illness_In_Household</rdfs:label>
+        <rdfs:comment>Childhood exposure to a mentally ill household member, impacting well-being.</rdfs:comment>
+        <metam:hasExternalParent rdf:resource="http://www.semanticweb.org/cbmi/ontologies/2018/10/aceso#Household_Challenges"/>    
+        <metam:isConstantRefinementOf rdf:resource="http://purl.org/metam/modules/aceso#SocialFactorEntity"/>
+        <metam:isPartOfModule rdf:resource="http://purl.org/metam/modules/aceso"/>
+        <metam:hasSource>ACESO</metam:hasSource>
+        <dcterms:source>ACESO Concept Mental_Illness_In_Household</dcterms:source>
+        <owl:equivalentClass rdf:resource="aceso:Mental_Illness_In_Household"/>
+    </owl:Class>
+
+    <!-- Records experiences of physical abuse during childhood. -->
+    <!-- Relevant for trauma-informed health and intervention models. -->
+    <owl:Class rdf:about="http://www.semanticweb.org/cbmi/ontologies/2018/10/aceso#Has_Been_Physically_Abused">
+        <rdfs:label>Has_Been_Physically_Abused</rdfs:label>
+        <rdfs:comment>Childhood experience involving direct physical harm by a caregiver or other person.</rdfs:comment>
+        <metam:hasExternalParent rdf:resource="http://www.semanticweb.org/cbmi/ontologies/2018/10/aceso#Social_Determinant_of_Health"/>       
+        <metam:isConstantRefinementOf rdf:resource="http://purl.org/metam/modules/aceso#SocialFactorEntity"/>
+        <metam:isPartOfModule rdf:resource="http://purl.org/metam/modules/aceso"/>
+        <metam:hasSource>ACESO</metam:hasSource>
+        <dcterms:source>ACESO Concept Has_Been_Physically_Abused</dcterms:source>
+        <owl:equivalentClass rdf:resource="aceso:Has_Been_Physically_Abused"/>
+    </owl:Class>
+
+</rdf:RDF>
